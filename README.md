@@ -9,6 +9,8 @@
 
 - 🌱 I’m currently learning **DBMS, sql, System Design,Material UI, Tailwind CSS and MongoDB**
 
+- 👨‍💼See My PortFolio [https://abhithakur7080.github.io/portfolio/](https://abhithakur7080.github.io/portfolio/)
+
 - 💬 Ask me about **react, Nodejs, Html, CSS, Bootstrap, sass, Materialise CSS, Java, Javascript**
 
 - 📫 How to reach me **abhijeetthakur7080@gmail.com**
@@ -29,5 +31,3 @@
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=abhithakur7080&show_icons=true&locale=en&layout=compact" alt="abhithakur7080" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=abhithakur7080&show_icons=true&locale=en" alt="abhithakur7080" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=abhithakur7080&" alt="abhithakur7080" /></p>
