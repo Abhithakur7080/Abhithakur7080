@@ -48,12 +48,18 @@
 <hr/>
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=abhithakur7080&theme=synthwave&show_icons=true&locale=en)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=Abhithakur7080&theme=synthwave&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Abhithakur7080&theme=synthwave&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+<p align="center">
+    <img src="https://github-readme-stats.vercel.app/api?username=abhithakur7080&theme=synthwave&show_icons=true&locale=en"/>
+     <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhithakur7080&theme=synthwave&hide_border=false"/>
+     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abhithakur7080&theme=synthwave&hide_border=false&include_all_commits=true&count_private=true&layout=compact"/>
+</p>
 
 ### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Abhithakur7080&limit=5&theme=synthwave&combine_all_yearly_contributions=true)
+<p align="center">
+    <img src="https://github-contributor-stats.vercel.app/api?username=Abhithakur7080&limit=5&theme=synthwave&combine_all_yearly_contributions=true"/>
+</p>
 
 ### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+<p align="center">
+    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
+</p>
