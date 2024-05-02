@@ -1,9 +1,9 @@
-<div align="center">
-<img   src="https://github.com/Abhithakur7080/Abhithakur7080/assets/119639453/499ba8f0-98d1-422a-8cdb-f7b7dab74c86" alt="my-gif" />
+<div align="center" style="background-color: #222;">
+<img   src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="my-gif" />
 </div>
 
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Jersey+15&size=40&pause=1000&color=503096¢er=true&random=false&width=435&lines=Hii+%F0%9F%91%8B+I'+m+Abhijeet+Kumar" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Jersey+15&size=40&pause=1000&color=E924EF¢er=true&random=false&width=435&lines=Hii+%F0%9F%91%8B+I'+m+Abhijeet+Kumar" />
 </h1>
 <h3 align="center">A passionate Full Stack developer from India.</h3>
 
@@ -11,7 +11,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=flat" alt="abhithakur7080" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080" alt="abhithakur7080" /></a> </p>
+<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080&theme=radical" alt="abhithakur7080" /></a> </p>
 
 <div align="center">
  
@@ -48,15 +48,12 @@
 <hr/>
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Abhithakur7080&theme=ayu-light&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=Abhithakur7080&theme=ayu-light&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Abhithakur7080&theme=ayu-light&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=ayu-light)
+![](https://github-readme-stats.vercel.app/api?username=abhithakur7080&theme=synthwave&show_icons=true&locale=en)<br/>
+![](https://github-readme-streak-stats.herokuapp.com/?user=Abhithakur7080&theme=synthwave&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Abhithakur7080&theme=synthwave&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 ### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Abhithakur7080&limit=5&theme=ayu-light&combine_all_yearly_contributions=true)
+![](https://github-contributor-stats.vercel.app/api?username=Abhithakur7080&limit=5&theme=synthwave&combine_all_yearly_contributions=true)
 
-### 😂 Random Dev Meme
-<img src='https://randommeme-five.vercel.app/' style="height: 400px;"/>
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
