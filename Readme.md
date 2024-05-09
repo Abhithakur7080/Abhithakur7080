@@ -9,15 +9,15 @@
 
 <br/>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=flat" alt="abhithakur7080" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=for-the-badge" alt="abhithakur7080" /> </p>
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080&theme=radical" alt="abhithakur7080" /></a> </p>
 
 <div align="center">
- 
+    
  🔭 I'm currently exploring new career opportunities.
  
- 🌱 I’m currently learning SQL & DBMS.
+ 🌱 I’m currently learning System Design.
 
 💬 Ask me about Java, Javascript, Node.js, Express, MongoDb... or anything here
 
@@ -29,6 +29,8 @@
   <a href="mailto:abhijeetthakur7080@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
   </a>
+
+    
   <a href="https://www.linkedin.com/in/abhijeet-kumar-39800320b/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
   </a>
@@ -57,6 +59,10 @@
 ### 🔝 Top Contributed Repo
 <p align="center">
     <img src="https://github-contributor-stats.vercel.app/api?username=Abhithakur7080&limit=5&theme=synthwave&combine_all_yearly_contributions=true"/>
+</p>
+
+<p align="center">
+ <img width="1000" src="github-snake.svg" alt="snake"/>
 </p>
 
 ### ✍️ Random Dev Quote
