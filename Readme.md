@@ -9,7 +9,12 @@
 
 <br/>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=for-the-badge" alt="abhithakur7080" /> </p>
+<p align="center">
+    <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=for-the-badge" alt="abhithakur7080" />
+  <a href="https://abhijeet-kumar-7080-portfolio.netlify.app" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-Open-blue?style=for-the-badge&logo=Portfolio&logoColor=E924EF&label=Portfolio&labelColor=gray&color=E924EF" target="_blank" />
+  </a>
+</p>
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080&theme=radical" alt="abhithakur7080" /></a> </p>
 
