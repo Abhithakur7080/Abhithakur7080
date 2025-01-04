@@ -12,7 +12,7 @@
 <p align="center">
     <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=for-the-badge" alt="abhithakur7080" />
   <a href="https://abhijeet-kumar-7080-portfolio.netlify.app" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-Open-blue?style=for-the-badge&logo=Portfolio&logoColor=E924EF&label=Portfolio&labelColor=gray&color=E924EF" target="_blank" />
+    <img src="https://img.shields.io/badge/Portfolio-blue?style=for-the-badge&logo=superuser&logoColor=ffffff&labelColor=gray&color=E924EF" target="_blank" />
   </a>
 </p>
 
@@ -37,7 +37,7 @@
 
     
   <a href="https://www.linkedin.com/in/abhijeet-kumar-39800320b/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
+    <img src="https://img.shields.io/badge/LinkedIn-333333?style=for-the-badge&label=in&labelColor=0077B5" target="_blank" />
   </a>
   </a>
 </div>
