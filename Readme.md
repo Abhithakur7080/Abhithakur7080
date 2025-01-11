@@ -20,13 +20,17 @@
 
 <div align="center">
     
- 🔭 I'm currently exploring new career opportunities.
- 
- 🌱 I’m currently learning System Design.
+| 🔭 | I'm currently exploring new career opportunities. |
+| :--------| :------------------------- |
 
-💬 Ask me about Java, Javascript, Node.js, Express, MongoDb... or anything here
+| 🌱 | I'm currently exploring new career opportunities. |
+| :-------- | :------------------------- |
 
-⚡ Fun fact Game of Thrones Night's Watch cloaks are made from Ikea rugs
+| 💬 | Ask me about Java, Javascript, Node.js, Express, MongoDb... or anything here. |
+| :-------- | :------------------------- |
+
+| ⚡ | Fun fact Game of Thrones Night's Watch cloaks are made from Ikea rugs |
+| :-------- | :------------------------- |
 
  </div>
  
