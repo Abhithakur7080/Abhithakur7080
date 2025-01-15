@@ -14,6 +14,16 @@
   <a href="https://abhijeet-kumar-7080-portfolio.netlify.app" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-blue?style=for-the-badge&logo=superuser&logoColor=ffffff&labelColor=gray&color=E924EF" target="_blank" />
   </a>
+
+    
+<a href="mailto:abhijeetthakur7080@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
+  </a>
+
+    
+  <a href="https://www.linkedin.com/in/abhijeet-kumar-39800320b/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-333333?style=for-the-badge&label=in&labelColor=0077B5" target="_blank" />
+  </a>
 </p>
 
 <p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080&theme=radical" alt="abhithakur7080" /></a> </p>
@@ -34,20 +44,10 @@
 
  </div>
  
-<div align="center"> 
-  <a href="mailto:abhijeetthakur7080@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
-  </a>
 
-    
-  <a href="https://www.linkedin.com/in/abhijeet-kumar-39800320b/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-333333?style=for-the-badge&label=in&labelColor=0077B5" target="_blank" />
-  </a>
-  </a>
-</div>
 
  
-<h2 align="center">⚒ Languages-Frameworks-Tools ⚒</h2>
+<h2 align="center">⚒ Languages Frameworks Tools ⚒</h2>
 <br/>
 <div align="center">
     <img src="https://skillicons.dev/icons?i=html,css,bootstrap,vscode,github,tailwind,git,postman"/><br>
