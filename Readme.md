@@ -57,7 +57,20 @@
 <br/>
 
 <hr/>
+<!-- Copy-paste in your Readme.md file -->
 
+<!-- Copy-paste in your Readme.md file -->
+
+<a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=119639453" target="_blank" style="display: block" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=119639453&image_size=auto&color_scheme=dark" width="771" height="auto">
+    <img alt="Dashboard stats of @Abhithakur7080" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=119639453&image_size=auto&color_scheme=light" width="771" height="auto">
+  </picture>
+</a>
+
+<!-- Made with [OSS Insight](https://ossinsight.io/) -->
+
+<!-- Made with [OSS Insight](https://ossinsight.io/) -->
 # 📊 GitHub Stats:
 <p align="center">
      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhithakur7080&theme=synthwave&hide_border=false"/><br/>
