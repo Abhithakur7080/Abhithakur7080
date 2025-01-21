@@ -26,25 +26,18 @@
   </a>
 </p>
 
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080&theme=radical" alt="abhithakur7080" /></a> </p>
 
 <div align="center">
     
 | 🔭 | I'm currently exploring new career opportunities. |
 | :--------| :------------------------- |
-
 | 🌱 | I'm currently exploring new career opportunities. |
-| :-------- | :------------------------- |
-
 | 💬 | Ask me about Java, Javascript, Node.js, Express, MongoDb... or anything here. |
-| :-------- | :------------------------- |
-
 | ⚡ | Fun fact Game of Thrones Night's Watch cloaks are made from Ikea rugs |
-| :-------- | :------------------------- |
 
  </div>
  
-
+<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=abhithakur7080&theme=radical" alt="abhithakur7080" /></a> </p>
 
  
 <h2 align="center">⚒ Languages Frameworks Tools ⚒</h2>
@@ -57,21 +50,23 @@
 <br/>
 
 <hr/>
+
+# 📊 GitHub Stats:
 <!-- Copy-paste in your Readme.md file -->
 
 <!-- Copy-paste in your Readme.md file -->
-
+<div align="center">
 <a href="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats?user_id=119639453" target="_blank" style="display: block" align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=119639453&image_size=auto&color_scheme=dark" width="771" height="auto">
     <img alt="Dashboard stats of @Abhithakur7080" src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=119639453&image_size=auto&color_scheme=light" width="771" height="auto">
   </picture>
 </a>
+</div>
 
 <!-- Made with [OSS Insight](https://ossinsight.io/) -->
 
 <!-- Made with [OSS Insight](https://ossinsight.io/) -->
-# 📊 GitHub Stats:
 <p align="center">
      <img src="https://github-readme-streak-stats.herokuapp.com/?user=Abhithakur7080&theme=synthwave&hide_border=false"/><br/>
     <img src="https://github-readme-stats.vercel.app/api?username=abhithakur7080&theme=synthwave&show_icons=true&locale=en"/><br/>
@@ -79,7 +74,7 @@
 </p>
 
 ### 🔝 Top Contributed Repo
-<p align="center">
+<p>
     <img src="https://github-contributor-stats.vercel.app/api?username=Abhithakur7080&limit=5&theme=synthwave&combine_all_yearly_contributions=true"/>
 </p>
 
