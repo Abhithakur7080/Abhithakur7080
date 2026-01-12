@@ -14,12 +14,12 @@
   <a href="https://abhijeet-kumar-7080-portfolio.netlify.app" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-blue?style=for-the-badge&logo=superuser&logoColor=ffffff&labelColor=gray&color=E924EF" target="_blank" />
   </a>
-<a href="mailto:abhijeetthakur7080@gmail.com">
+<a href="mailto:abhijeetkumar431323@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
   </a>
 
     
-  <a href="https://www.linkedin.com/in/abhijeet-kumar-39800320b/" target="_blank">
+  <a href="https://www.linkedin.com/in/abhijeet-kumar-76863217a/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-333333?style=for-the-badge&label=in&labelColor=0077B5" target="_blank" />
   </a>
 </p>
