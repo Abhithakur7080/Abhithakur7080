@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  Personal Portfolio Website — index.html  [PREMIUM v2]
+  ============================================================
+  Author      : Abhijeet Kumar
+  Description : Cinematic dark-mode personal portfolio with
+                AI chat widget, experience timeline, animated
+                skill bars, filterable project cards.
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO & Performance -->
+  <title>Abhijeet Kumar | Senior Full Stack Engineer</title>
+  <meta name="description"
+        content="Abhijeet Kumar is a Full Stack Engineer specializing in React.js, Node.js, TypeScript, and MongoDB. Explore my professional portfolio, skills, and projects." />
+  <meta name="keywords"
+        content="Abhijeet Kumar, Full Stack Engineer, React Developer, Node.js Developer, Web Developer Portfolio, TypeScript, MongoDB" />
+  <meta name="author" content="Abhijeet Kumar" />
+  <meta name="theme-color" content="#0f111a" />
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title"       content="Abhijeet Kumar | Senior Full Stack Engineer" />
+  <meta property="og:description" content="Discover Abhijeet Kumar's portfolio: A Full Stack Engineer architecting modern, scalable web applications." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://abhijeet-kumar-7080-portfolio.netlify.app" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abhijeet Kumar | Senior Full Stack Engineer" />
+  <meta name="twitter:description" content="Discover Abhijeet Kumar's portfolio: A Full Stack Engineer architecting modern, scalable web applications." />
+
+  <!-- Premium Developer SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%231a1d27' stroke='%2330364d' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='system-ui, sans-serif' font-size='55' font-weight='800' fill='%2300E5FF' text-anchor='middle'%3EA.%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <!-- Fonts: Inter (body) + Outfit (headings) + JetBrains Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+  <!-- Icon Library (FontAwesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Custom Icon Colors */
+    .fa-hand-wave { color: #F2C94C; }
+    .fa-location-dot { color: #EB5757; }
+    .fa-user-tie, .fa-laptop-code, .fa-envelope-open-text { color: var(--color-primary); }
+    .fa-graduation-cap, .fa-palette { color: #BB6BD9; }
+    .fa-briefcase, .fa-book { color: #F2994A; }
+    .fa-envelope, .fa-file-pdf { color: #EB5757; }
+    .fa-phone { color: #27AE60; }
+    .fa-bolt, .fa-star { color: #F2C94C; }
+    .fa-gear { color: #56CCF2; }
+    .fa-wrench { color: #a8b2d1; }
+    .fa-robot { color: #00E5FF; }
+    .fa-film { color: #EB5757; }
+    .fa-linkedin { color: #2D9CDB; }
+    .fa-trash-can { color: #EB5757; }
+    .fa-github { color: #a46dff; /* Vibrant Purple */ }
+    .fa-arrow-up { color: #00E5FF; /* Cyan */ }
+    .fa-rocket { color: #F2C94C !important; /* Yellow */ }
+    .fa-paper-plane { color: #F2C94C !important; /* Yellow */ }
+    .fa-caret-up { color: #00E5FF !important; /* Cyan */ }
+    
+    /* Give buttons nice spacing for their newly colored icons */
+    .btn .fa-solid, .btn .fa-brands { margin-right: 6px; }
+    .card-link-btn .fa-brands { color: #00E5FF !important; margin-right: 4px; }
+    .chat-icon-open .fa-robot { color: #050816 !important; /* Dark to contrast button bg */ }
+    .chat-icon-close .fa-xmark { color: #EB5757 !important; /* Red */ }
+    
+    /* 3D Realistic Styles */
+    .project-card, .skill-category, .hero-code-card {
+      transform-style: preserve-3d;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: linear-gradient(145deg, rgba(30, 32, 44, 0.8), rgba(15, 17, 26, 0.9));
+      backdrop-filter: blur(10px);
+    }
+    
+    /* 3D Inner Pop-out elements */
+    .card-img-wrapper, .photo-frame, .category-icon, .code-card-header {
+      transform: translateZ(40px);
+      transition: transform 0.3s ease;
+    }
+    
+    .card-body, .skill-bar-group, .skill-tags {
+      transform: translateZ(20px);
+      transition: transform 0.3s ease;
+    }
+    
+    .photo-frame {
+      border-radius: var(--radius-xl) !important;
+      overflow: hidden !important;
+      clip-path: inset(0 round var(--radius-xl)) !important;
+      -webkit-clip-path: inset(0 round var(--radius-xl)) !important;
+    }
+    
+    .photo-frame img {
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      border-radius: var(--radius-xl) !important;
+    }
+    
+    .btn {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      transition: transform 0.1s ease, box-shadow 0.1s ease !important;
+    }
+    
+    .btn:active {
+      transform: translateY(4px) !important;
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .skill-bar-fill {
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.3), 0 0 10px var(--color-primary);
+    }
+  </style>
+</head>
+
+<body class="dark-mode" data-theme="dark">
+  <!-- Vanta.js 3D Background Container -->
+  <div id="vanta-bg" aria-hidden="true"></div>
+
+  <!-- Custom Animated Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Ambient background blobs (fixed, purely decorative) -->
+  <div class="hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob-2" aria-hidden="true"></div>
+  <div class="hero-blob-3" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVBAR
+       ════════════════════════════════════════════════════════ -->
+  <header class="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo code-style-logo" aria-label="Abhijeet Kumar — top">
+        <span class="logo-bracket">&lt;</span>Abhijeet <span class="logo-attr">role</span>=<span class="logo-string">"dev"</span><span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <button class="hamburger" id="hamburger-btn"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-links" class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#about"      class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#contact"    class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 1: HERO — Cinematic opener
+         ───────────────────────────────────────────────────── -->
+    <section id="hero" class="hero-section" aria-label="Introduction">
+
+      <!-- Left: Text content -->
+      <div class="hero-content">
+        <!-- Availability badge -->
+        <div class="hero-badge reveal">
+          <span class="dot"></span>
+          Available for opportunities
+        </div>
+
+        <p class="hero-greeting reveal delay-1"><i class="fa-solid fa-hand-wave"></i> Hey there, I'm</p>
+        <h1 class="hero-name reveal delay-2">Abhijeet<br>Kumar</h1>
+
+        <p class="hero-role reveal delay-3">
+          I build <span class="typed-text" id="typed-output" aria-live="polite"></span><span class="cursor" aria-hidden="true">|</span>
+        </p>
+
+        <p class="hero-bio reveal delay-4">
+          FullStack Engineer with <strong>2+ years</strong> of experience building scalable web applications using <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>. Skilled in frontend optimization, state management with Redux Toolkit, and mentoring developers.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta reveal delay-5">
+          <a href="#projects" class="btn btn-primary" aria-label="View my projects">
+            <i class="fa-solid fa-rocket"></i> View Projects
+          </a>
+          <a href="Abhijeet_resume.pdf"
+             class="btn btn-secondary"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Download résumé PDF">
+            <i class="fa-solid fa-file-pdf"></i> Download CV
+          </a>
+        </div>
+
+        <!-- Social links row -->
+        <div class="hero-socials reveal">
+          <div class="social-divider"></div>
+          <div class="social-links">
+            <a href="https://github.com/abhithakur7080"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link" aria-label="GitHub profile"
+               title="GitHub">
+              <!-- GitHub SVG icon -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/abhijeet-kumar-76863217a"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link" aria-label="LinkedIn profile"
+               title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:abhijeetkumar431323@gmail.com"
+               class="social-link" aria-label="Email me"
+               title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Floating code card -->
+      <div class="hero-code-card reveal" aria-hidden="true">
+        <!-- macOS-style window dots -->
+        <div class="code-card-header">
+          <span class="code-dot red"></span>
+          <span class="code-dot yellow"></span>
+          <span class="code-dot green"></span>
+        </div>
+        <pre><code><span class="code-comment">// abhijeet.config.ts</span>
+<span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-key">name</span>:       <span class="code-string">"Abhijeet Kumar"</span>,
+  <span class="code-key">role</span>:       <span class="code-string">"Full Stack Engineer"</span>,
+  <span class="code-key">location</span>:  <span class="code-string">"India <i class='fa-solid fa-location-dot'></i>"</span>,
+  <span class="code-key">stack</span>: [
+    <span class="code-string">"React.js"</span>, <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"Node.js"</span>, <span class="code-string">"MongoDB"</span>,
+  ],
+  <span class="code-key">experience</span>: <span class="code-string">"2+ years"</span>,
+  <span class="code-key">mentored</span>:  <span class="code-num">1500</span><span class="code-comment">/* students */</span>,
+  <span class="code-key">available</span>: <span class="code-bool">true</span>,
+};</code></pre>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 2: ABOUT
+         ───────────────────────────────────────────────────── -->
+    <section id="about" class="about-section section" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fa-solid fa-user-tie"></i> Who am I?</span>
+          <h2 id="about-heading" class="section-title reveal">About Me</h2>
+          <p class="section-subtitle reveal">A bit about my journey & background</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Photo -->
+          <div class="about-photo reveal-left">
+            <div class="photo-ring" aria-hidden="true"></div>
+            <div class="photo-frame">
+              <img src="profile.png"
+                   alt="Abhijeet Kumar — profile photo"
+                   width="300" height="300" loading="lazy" />
+            </div>
+            <!-- XP badge -->
+            <div class="photo-xp-badge">
+              <span class="badge-num">2+</span>
+              <span class="badge-label">Yrs Experience</span>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="about-text reveal-right">
+            <p>
+              Hi! I'm a <strong>Full Stack Engineer</strong> with 2+ years of experience building scalable web applications. I currently work at
+              <strong>Groove Innovations</strong> where I lead frontend architecture, implement microfrontends, and optimize performance for a large-scale SaaS platform.
+            </p>
+            <p>
+              Beyond development, I'm passionate about <strong>teaching</strong> — I've mentored over <strong>1500+ students</strong> at <strong>Sunrise Mentors (Coding Ninjas)</strong>, resolving 3500+ technical issues and guiding them through full stack projects.
+            </p>
+            <p>
+              My goal is to create meaningful digital products with a focus on clean code, scalability, and best practices.
+            </p>
+
+            <ul class="about-info-list">
+              <li><span class="info-label"><i class="fa-solid fa-graduation-cap"></i></span> B.Tech, Electrical Engineering</li>
+              <li><span class="info-label"><i class="fa-solid fa-briefcase"></i></span> Groove Innovations Pvt. Ltd.</li>
+              <li><span class="info-label"><i class="fa-solid fa-envelope"></i></span> abhijeetkumar431323@gmail.com</li>
+              <li><span class="info-label"><i class="fa-solid fa-phone"></i></span> +91-6200431323</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="stats-strip reveal">
+          <div class="stat-card">
+            <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="1500">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Students Mentored</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="3500">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Issues Resolved</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 3: EXPERIENCE — Timeline
+         ───────────────────────────────────────────────────── -->
+    <section id="experience" class="experience-section section" aria-labelledby="exp-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fa-solid fa-briefcase"></i> Work History</span>
+          <h2 id="exp-heading" class="section-title reveal">Experience</h2>
+          <p class="section-subtitle reveal">Where I've worked and what I've built</p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- Job 1: Current -->
+          <div class="timeline-item reveal">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-role">Full Stack Engineer</p>
+                  <p class="timeline-company">Groove Innovations Pvt. Ltd.</p>
+                </div>
+                <span class="timeline-period">06/2025 – Present</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Leading frontend architecture, coding standards, and system design for a large-scale SaaS platform.</li>
+                <li>Designed and implemented microfrontend applications using React.js, Vite, TypeScript, and Tailwind CSS.</li>
+                <li>Built reusable UI components and centralized state management using Redux Toolkit across multiple services.</li>
+                <li>Optimized frontend performance, reducing build time and improving runtime responsiveness.</li>
+                <li>Collaborated with backend teams to design and integrate RESTful APIs using Node.js and Express.js.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="timeline-tag">React.js</span>
+                <span class="timeline-tag">TypeScript</span>
+                <span class="timeline-tag">Redux Toolkit</span>
+                <span class="timeline-tag">Node.js</span>
+                <span class="timeline-tag">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job 2: Teaching Assistant -->
+          <div class="timeline-item reveal delay-2">
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <p class="timeline-role">React.js Teaching Assistant</p>
+                  <p class="timeline-company">Sunrise Mentors Pvt. Ltd.</p>
+                </div>
+                <span class="timeline-period">11/2023 – 06/2025</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Mentored 1500+ students in React.js, JavaScript, and frontend system design concepts.</li>
+                <li>Resolved 3500+ technical issues related to React hooks, state management, and performance optimization.</li>
+                <li>Reviewed 500+ full stack projects, ensuring clean code, scalability, and best practices.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="timeline-tag">React.js</span>
+                <span class="timeline-tag">Code Review</span>
+                <span class="timeline-tag">Mentorship</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 4: SKILLS
+         ───────────────────────────────────────────────────── -->
+    <section id="skills" class="skills-section section" aria-labelledby="skills-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fa-solid fa-bolt"></i> Tech Stack</span>
+          <h2 id="skills-heading" class="section-title reveal">Skills</h2>
+          <p class="section-subtitle reveal">Technologies I use to bring ideas to life</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Frontend -->
+          <div class="skill-category reveal">
+            <span class="category-icon"><i class="fa-solid fa-palette"></i></span>
+            <h3 class="category-title">Frontend</h3>
+            <div class="skill-bar-group">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-react" style="color: #61DAFB; margin-right: 8px;"></i>React.js</span><span>92%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="92"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-js" style="color: #F7DF1E; margin-right: 8px;"></i>JavaScript / TypeScript</span><span>90%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-solid fa-code-branch" style="color: #764ABC; margin-right: 8px;"></i>Redux Toolkit</span><span>85%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-css3-alt" style="color: #38B2AC; margin-right: 8px;"></i>Tailwind CSS & Material UI</span><span>88%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="88"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-html5" style="color: #E34F26; margin-right: 8px;"></i>HTML5 / CSS3 / Scss</span><span>95%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="95"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category reveal delay-2">
+            <span class="category-icon"><i class="fa-solid fa-gear"></i></span>
+            <h3 class="category-title">Backend & Databases</h3>
+            <div class="skill-bar-group">
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-node-js" style="color: #339933; margin-right: 8px;"></i>Node.js / Express.js</span><span>85%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-solid fa-database" style="color: #47A248; margin-right: 8px;"></i>MongoDB / Firebase</span><span>82%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="82"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-solid fa-server" style="color: var(--color-primary); margin-right: 8px;"></i>REST APIs</span><span>88%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="88"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-python" style="color: #3776AB; margin-right: 8px;"></i>Python</span><span>75%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-header"><span><i class="fa-brands fa-docker" style="color: #2496ED; margin-right: 8px;"></i>Docker</span><span>70%</span></div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-bar-fill" data-level="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Practices -->
+          <div class="skill-category reveal delay-3">
+            <span class="category-icon"><i class="fa-solid fa-wrench"></i></span>
+            <h3 class="category-title">Tools & Version Control</h3>
+            <div class="skill-tags">
+              <span class="skill-tag"><i class="fa-brands fa-git-alt" style="color: #F05032; margin-right: 6px;"></i>Git</span>
+              <span class="skill-tag"><i class="fa-brands fa-github" style="color: #e6f1ff; margin-right: 6px;"></i>GitHub</span>
+              <span class="skill-tag"><i class="fa-solid fa-bolt" style="color: #646CFF; margin-right: 6px;"></i>Vite</span>
+              <span class="skill-tag"><i class="fa-brands fa-bootstrap" style="color: #7952B3; margin-right: 6px;"></i>Bootstrap</span>
+              <span class="skill-tag"><i class="fa-solid fa-code" style="color: #007ACC; margin-right: 6px;"></i>VS Code</span>
+              <span class="skill-tag"><i class="fa-solid fa-globe" style="color: #00C7B7; margin-right: 6px;"></i>Netlify</span>
+              <span class="skill-tag"><i class="fa-solid fa-caret-up" style="color: #fff; margin-right: 6px;"></i>Vercel</span>
+              <span class="skill-tag"><i class="fa-solid fa-paper-plane" style="color: #FF6C37; margin-right: 6px;"></i>Postman</span>
+              <span class="skill-tag"><i class="fa-solid fa-credit-card" style="color: #635BFF; margin-right: 6px;"></i>Stripe</span>
+              <span class="skill-tag"><i class="fa-solid fa-shield-halved" style="color: #3068b7; margin-right: 6px;"></i>Zod</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 5: PROJECTS
+         ───────────────────────────────────────────────────── -->
+    <section id="projects" class="projects-section section" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fa-solid fa-laptop-code"></i> What I've Built</span>
+          <h2 id="projects-heading" class="section-title reveal">Projects</h2>
+          <p class="section-subtitle reveal">A selection of real-world work I'm proud of</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend"><i class="fa-solid fa-palette"></i> Frontend</button>
+          <button class="filter-btn" data-filter="backend"><i class="fa-solid fa-gear"></i> Backend</button>
+          <button class="filter-btn" data-filter="ai"><i class="fa-solid fa-robot"></i> AI</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- Project 1: The Book Store -->
+          <article class="project-card featured reveal" data-category="backend frontend">
+            <span class="featured-badge"><i class="fa-solid fa-star"></i> Featured</span>
+            <div class="card-img-wrapper">
+              <div class="card-img-placeholder placeholder-bookstore">
+                <span><i class="fa-solid fa-book"></i></span>
+              </div>
+              <div class="card-overlay">
+                <a href="https://github.com/Abhithakur7080/bookstore"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Book Store on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://bookstore-1-f5z3.onrender.com"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-backend">Backend</span>
+                <span class="tag tag-frontend">Frontend</span>
+              </div>
+              <h3 class="card-title">The Book Store</h3>
+              <p class="card-desc">
+                Developed a full stack e-commerce application using React.js and Node.js with secure authentication, role-based authorization, and Stripe payment gateway. Improved data fetching by 80% using RTK Query.
+              </p>
+              <p class="card-tech">React.js · Node.js · TypeScript · MongoDB · Stripe · Tailwind CSS</p>
+            </div>
+          </article>
+
+          <!-- Project 2: Streamzilla -->
+          <article class="project-card reveal delay-2" data-category="backend frontend">
+            <div class="card-img-wrapper">
+              <div class="card-img-placeholder placeholder-streamzilla">
+                <span><i class="fa-solid fa-film"></i></span>
+              </div>
+              <div class="card-overlay">
+                <a href="https://github.com/Abhithakur7080/Streamzilla"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Streamzilla on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://streamzilla.vercel.app"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-backend">Backend</span>
+                <span class="tag tag-frontend">Frontend</span>
+              </div>
+              <h3 class="card-title">Streamzilla</h3>
+              <p class="card-desc">
+                Built a full stack video streaming platform with video upload, playback, and user interaction features. Scalable state management via Redux Toolkit, increasing user engagement by 40%.
+              </p>
+              <p class="card-tech">React.js · Node.js · Express.js · MongoDB · Redux Toolkit</p>
+            </div>
+          </article>
+
+          <!-- Project 3: Ecommerce Trendbazaar -->
+          <article class="project-card reveal delay-3" data-category="backend frontend">
+            <div class="card-img-wrapper">
+              <div class="card-img-placeholder placeholder-ecommerce">
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+              </div>
+              <div class="card-overlay">
+                <a href="https://github.com/Abhithakur7080/ecommerce"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Ecommerce on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://ecommerce-trendbazaar.vercel.app"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-backend">Backend</span>
+                <span class="tag tag-frontend">Frontend</span>
+              </div>
+              <h3 class="card-title">Ecommerce Trendbazaar</h3>
+              <p class="card-desc">
+                In this app you can find all the ecommerce related API used by backend server also you can clone and use checkout process. Features complete payment flows.
+              </p>
+              <p class="card-tech">React.js · Node.js · Express.js · MongoDB · Cloudinary</p>
+            </div>
+          </article>
+
+          <!-- Project 4: Google Mail Clone -->
+          <article class="project-card reveal" data-category="frontend">
+            <div class="card-img-wrapper">
+              <div class="card-img-placeholder placeholder-mail">
+                <span><i class="fa-solid fa-envelope"></i></span>
+              </div>
+              <div class="card-overlay">
+                <a href="https://github.com/Abhithakur7080/Google-mail-clone"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Google Mail Clone on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://google-mail-x.netlify.app"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-frontend">Frontend</span>
+              </div>
+              <h3 class="card-title">Google Mail Clone</h3>
+              <p class="card-desc">
+                This app is the clone of google mail have much similar functionality, build by using React.js, Tailwind CSS, Firebase for real-time data sync.
+              </p>
+              <p class="card-tech">React.js · Tailwind CSS · Firebase · Context API</p>
+            </div>
+          </article>
+
+          <!-- Project 5: Convo App -->
+          <article class="project-card reveal delay-1" data-category="frontend">
+            <div class="card-img-wrapper">
+              <div class="card-img-placeholder placeholder-convo">
+                <span><i class="fa-solid fa-comments"></i></span>
+              </div>
+              <div class="card-overlay">
+                <a href="https://github.com/Abhithakur7080/convo"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Convo on GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://convo-live.netlify.app/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="card-link-btn" aria-label="View Live Demo">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-frontend">Frontend</span>
+              </div>
+              <h3 class="card-title">Convo App</h3>
+              <p class="card-desc">
+                This project provides users with a seamless chatting experience, featuring real-time messaging, authentication, and various other functionalities.
+              </p>
+              <p class="card-tech">React.js · Firebase · Redux Toolkit · SCSS</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 6: TESTIMONIALS
+         ───────────────────────────────────────────────────── -->
+    <section id="testimonials" class="testimonials-section section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fa-solid fa-quote-left"></i> Recommendations</span>
+          <h2 id="testimonials-heading" class="section-title reveal">What People Say</h2>
+          <p class="section-subtitle reveal">Feedback from colleagues and mentors</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card glass-card reveal">
+            <div class="testimonial-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <p class="testimonial-text">"Abhijeet is an exceptionally fast learner. His ability to dive deep into complex frontend architectures and consistently deliver robust, bug-free components makes him a massive asset to any engineering team."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">V</div>
+              <div>
+                <h4 class="author-name">Vikram Singh</h4>
+                <p class="author-role">Senior Software Engineer</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card glass-card reveal">
+            <div class="testimonial-icon"><i class="fa-solid fa-quote-right"></i></div>
+            <p class="testimonial-text">"Collaborating with Abhijeet was fantastic. He brought a lot of fresh ideas to our UI/UX design and single-handedly optimized our React build times. Highly recommended for full-stack roles."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">P</div>
+              <div>
+                <h4 class="author-name">Priya Patel</h4>
+                <p class="author-role">Product Manager</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 6: CONTACT
+         ───────────────────────────────────────────────────── -->
+    <section id="contact" class="contact-section section" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</span>
+          <h2 id="contact-heading" class="section-title reveal">Let's Work Together</h2>
+          <p class="section-subtitle reveal">Open to full-stack engineering roles & collaborations</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Info column -->
+          <div class="reveal-left">
+            <h3 class="contact-info-title">Let's build<br>something great</h3>
+            <p class="contact-blurb">
+              Whether you have a project idea, a job opportunity, or just want to
+              discuss tech — I'm always happy to chat. I respond within 24 hours.
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:abhijeetkumar431323@gmail.com" class="contact-link-item">
+                <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div style="font-weight:600;color:var(--color-text-primary);font-size:0.85rem;">Email</div>
+                  <div>abhijeetkumar431323@gmail.com</div>
+                </div>
+              </a>
+              <a href="tel:+916200431323" class="contact-link-item">
+                <div class="contact-link-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <div style="font-weight:600;color:var(--color-text-primary);font-size:0.85rem;">Phone / WhatsApp</div>
+                  <div>+91-6200431323</div>
+                </div>
+              </a>
+              <a href="https://github.com/abhithakur7080"
+                 target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <div class="contact-link-icon"><i class="fa-brands fa-github"></i></div>
+                <div>
+                  <div style="font-weight:600;color:var(--color-text-primary);font-size:0.85rem;">GitHub</div>
+                  <div>github.com/abhithakur7080</div>
+                </div>
+              </a>
+              <a href="https://linkedin.com/in/abhijeet-kumar-76863217a"
+                 target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <div class="contact-link-icon"><i class="fa-brands fa-linkedin"></i></div>
+                <div>
+                  <div style="font-weight:600;color:var(--color-text-primary);font-size:0.85rem;">LinkedIn</div>
+                  <div>Abhijeet Kumar</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form column -->
+          <form class="contact-form reveal-right" id="contact-form" novalidate aria-label="Contact form">
+
+            <div class="form-group">
+              <label for="contact-name">Your Name *</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input type="text" id="contact-name" name="from_name"
+                       placeholder="Rahul Sharma"
+                       required autocomplete="name" aria-required="true" />
+              </div>
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-envelope input-icon"></i>
+                <input type="email" id="contact-email" name="reply_to"
+                       placeholder="rahul@company.com"
+                       required autocomplete="email" aria-required="true" />
+              </div>
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-heading input-icon"></i>
+                <input type="text" id="contact-subject" name="subject"
+                       placeholder="Job opportunity / Project collaboration" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-pen input-icon" style="top: 1.2rem; transform: none;"></i>
+                <textarea id="contact-message" name="message" rows="5"
+                          placeholder="Hi Abhijeet, I'd love to discuss..."
+                          required aria-required="true"></textarea>
+              </div>
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full"
+                    id="contact-submit" aria-label="Send message">
+              <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────
+         SECTION 7: DEV JOKES (FUN WIDGET)
+         ───────────────────────────────────────────────────── -->
+    <section id="dev-jokes" class="dev-jokes-section section" aria-labelledby="jokes-heading">
+      <div class="container">
+        <div class="joke-card glass-card reveal">
+          <div class="joke-header">
+            <i class="fa-solid fa-terminal"></i>
+            <h3 id="jokes-heading">Developer Humor</h3>
+          </div>
+          <div class="joke-content">
+            <p id="joke-text">Why do programmers prefer dark mode?<br><br>Because light attracts bugs.</p>
+          </div>
+          <button id="new-joke-btn" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-shuffle"></i> Generate New Joke
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-text">
+        Designed & built with <i class="fa-solid fa-heart" style="color: #e25555;"></i> by
+        <a href="#hero">Abhijeet Kumar</a>
+        &nbsp;·&nbsp;
+        <span id="footer-year"></span>
+      </p>
+      <p class="footer-sub">Building scalable web applications & delivering premium digital experiences.</p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════
+       AI CHAT WIDGET
+       ════════════════════════════════════════════════════════ -->
+  <div class="chat-widget-wrapper" id="chat-widget" aria-label="AI chat widget">
+
+    <button class="chat-toggle-btn" id="chat-toggle-btn"
+            aria-label="Open AI chat" aria-expanded="false" aria-controls="chat-panel">
+      <span class="chat-icon-open" aria-hidden="true"><i class="fa-solid fa-robot"></i></span>
+      <span class="chat-icon-close" aria-hidden="true"><i class="fa-solid fa-xmark"></i></span>
+    </button>
+
+    <div class="chat-panel" id="chat-panel"
+         role="dialog" aria-label="AI Assistant Chat" aria-modal="false" hidden>
+
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <span class="online-dot" aria-hidden="true"></span>
+          <div>
+            <p class="chat-bot-name">Abhijeet's AI Assistant</p>
+            <p class="chat-bot-status">Powered by Local AI · Always online</p>
+          </div>
+        </div>
+        <button class="chat-clear-btn" id="chat-clear-btn"
+                aria-label="Clear chat history" title="Clear chat"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+
+      <div class="chat-messages" id="chat-messages"
+           role="log" aria-label="Chat messages" aria-live="polite"></div>
+
+      <div class="chat-suggestions" id="chat-suggestions">
+        <button class="suggestion-chip" data-question="What are your top skills?">Top skills?</button>
+        <button class="suggestion-chip" data-question="Tell me about The Book Store project">Book Store project?</button>
+        <button class="suggestion-chip" data-question="Are you available for hire?">Available for hire?</button>
+        <button class="suggestion-chip" data-question="Tell me a dev joke">Tell me a joke!</button>
+      </div>
+
+      <div class="chat-input-bar">
+        <textarea id="chat-input" class="chat-textarea"
+                  placeholder="Ask me anything about Abhijeet..."
+                  rows="1" aria-label="Type your message" maxlength="500"></textarea>
+        <button class="chat-send-btn" id="chat-send-btn"
+                aria-label="Send message" disabled>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scroll-top-btn"
+          aria-label="Scroll back to top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Vanilla Tilt (3D Effects) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <!-- Three.js & Vanta.js (3D Background Animation) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- App script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
