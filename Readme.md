@@ -11,7 +11,7 @@
 
 <p align="center">
     <img src="https://komarev.com/ghpvc/?username=abhithakur7080&label=Profile%20views&color=503096&style=for-the-badge" alt="abhithakur7080" />
-  <a href="https://abhijeet-kumar-7080-portfolio.netlify.app" target="_blank">
+  <a href="https://abhithakur7080.github.io/Abhithakur7080" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-blue?style=for-the-badge&logo=superuser&logoColor=ffffff&labelColor=gray&color=E924EF" target="_blank" />
   </a>
 <a href="mailto:abhijeetkumar431323@gmail.com">
